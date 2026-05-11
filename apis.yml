@@ -1,0 +1,62 @@
+aid: aws-security-hub
+name: AWS Security Hub
+description: >-
+  AWS Security Hub is a cloud security posture management (CSPM) service that
+  aggregates, organizes, and prioritizes security findings from AWS services
+  like Amazon GuardDuty, Inspector, and Macie, as well as supported
+  third-party products. It continuously assesses your AWS environment against
+  security standards such as AWS Foundational Security Best Practices, CIS,
+  PCI DSS, and NIST. The Security Hub API and AWS SDKs provide access to
+  findings, controls, insights, and automation rules using AWS Signature
+  Version 4 authentication.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Security
+  - Cloud Security Posture Management
+  - Compliance
+  - Findings
+  - Threat Detection
+  - Cloud
+  - AWS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: aws-security-hub:cspm-api
+    name: AWS Security Hub CSPM API
+    description: >-
+      REST API for managing security standards, controls, findings, insights,
+      automation rules, and member account configuration in AWS Security Hub.
+      Requests are authenticated with AWS Signature Version 4 (SigV4) using
+      AWS access keys or temporary IAM credentials.
+    humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
+    baseURL: https://securityhub.us-east-1.amazonaws.com
+    tags:
+      - Security
+      - CSPM
+      - Findings
+      - Compliance
+      - AWS
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
+      - type: User Guide
+        url: https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html
+      - type: Endpoints
+        url: https://docs.aws.amazon.com/general/latest/gr/sechub.html
+
+common:
+  - type: Website
+    url: https://aws.amazon.com/security-hub/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/securityhub/
+  - type: Pricing
+    url: https://aws.amazon.com/security-hub/pricing/
+  - type: Sign Up
+    url: https://portal.aws.amazon.com/billing/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
