@@ -1,0 +1,710 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Hub",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe the Hub configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "params": [
+              {
+                "name": "HubArn",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe the Hub configuration"
+        },
+        {
+          "info": {
+            "name": "Enable Security Hub for the account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enable Security Hub for the account"
+        },
+        {
+          "info": {
+            "name": "Update Hub configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Hub configuration"
+        },
+        {
+          "info": {
+            "name": "Disable Security Hub for the account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts"
+          },
+          "docs": "Disable Security Hub for the account"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Findings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get findings"
+        },
+        {
+          "info": {
+            "name": "Batch update findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://securityhub.{region}.amazonaws.com/findings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch update findings"
+        },
+        {
+          "info": {
+            "name": "Batch import findings from a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings/import",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch import findings from a product"
+        },
+        {
+          "info": {
+            "name": "Get finding history",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings/history",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get finding history"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Insights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an insight",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/insights",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an insight"
+        },
+        {
+          "info": {
+            "name": "Get insights",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/insights/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get insights"
+        },
+        {
+          "info": {
+            "name": "Get insight results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/insights/results/:InsightArn",
+            "params": [
+              {
+                "name": "InsightArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get insight results"
+        },
+        {
+          "info": {
+            "name": "Update an insight",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://securityhub.{region}.amazonaws.com/insights/:InsightArn",
+            "params": [
+              {
+                "name": "InsightArn",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an insight"
+        },
+        {
+          "info": {
+            "name": "Delete an insight",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://securityhub.{region}.amazonaws.com/insights/:InsightArn",
+            "params": [
+              {
+                "name": "InsightArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an insight"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Standards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List supported standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards"
+          },
+          "docs": "List supported standards"
+        },
+        {
+          "info": {
+            "name": "Enable standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/register",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enable standards"
+        },
+        {
+          "info": {
+            "name": "Disable standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/deregister",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Disable standards"
+        },
+        {
+          "info": {
+            "name": "Get enabled standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/get"
+          },
+          "docs": "Get enabled standards"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Controls",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe standards controls",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/controls/:StandardsSubscriptionArn",
+            "params": [
+              {
+                "name": "StandardsSubscriptionArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describe standards controls"
+        },
+        {
+          "info": {
+            "name": "List security control definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/securityControls"
+          },
+          "docs": "List security control definitions"
+        },
+        {
+          "info": {
+            "name": "Batch get security controls",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/securityControls/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch get security controls"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List member accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/members"
+          },
+          "docs": "List member accounts"
+        },
+        {
+          "info": {
+            "name": "Create member accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/members",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create member accounts"
+        },
+        {
+          "info": {
+            "name": "Delete member accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/members/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete member accounts"
+        },
+        {
+          "info": {
+            "name": "Disassociate member accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/members/disassociate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Disassociate member accounts"
+        },
+        {
+          "info": {
+            "name": "Invite members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/members/invite",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invite members"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invitations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List invitations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/invitations"
+          },
+          "docs": "List invitations"
+        },
+        {
+          "info": {
+            "name": "Accept an invitation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/invitations/accept",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Accept an invitation"
+        },
+        {
+          "info": {
+            "name": "Decline invitations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/invitations/decline",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Decline invitations"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Automation Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an automation rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an automation rule"
+        },
+        {
+          "info": {
+            "name": "List automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/list"
+          },
+          "docs": "List automation rules"
+        },
+        {
+          "info": {
+            "name": "Batch get automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch get automation rules"
+        },
+        {
+          "info": {
+            "name": "Batch delete automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch delete automation rules"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Configuration Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a configuration policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/configurationPolicy/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a configuration policy"
+        },
+        {
+          "info": {
+            "name": "List configuration policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/configurationPolicy/list"
+          },
+          "docs": "List configuration policies"
+        },
+        {
+          "info": {
+            "name": "Get a configuration policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/configurationPolicy/get/:Identifier",
+            "params": [
+              {
+                "name": "Identifier",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a configuration policy"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Action Targets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe action targets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/actionTargets"
+          },
+          "docs": "Describe action targets"
+        },
+        {
+          "info": {
+            "name": "Create an action target",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/actionTargets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an action target"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/tags/:ResourceArn",
+            "params": [
+              {
+                "name": "ResourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tags"
+        },
+        {
+          "info": {
+            "name": "Tag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/tags/:ResourceArn",
+            "params": [
+              {
+                "name": "ResourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Tag a resource"
+        },
+        {
+          "info": {
+            "name": "Untag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://securityhub.{region}.amazonaws.com/tags/:ResourceArn",
+            "params": [
+              {
+                "name": "ResourceArn",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "tagKeys",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Untag a resource"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
