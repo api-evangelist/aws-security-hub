@@ -49,6 +49,14 @@ apis:
         url: https://docs.aws.amazon.com/general/latest/gr/sechub.html
 
 common:
+  - type: TrustCenter
+    url: security/aws-security-hub-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/aws-security-hub-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/aws-security-hub-domain-security.yml
+  - type: Authentication
+    url: authentication/aws-security-hub-authentication.yml
   - type: Website
     url: https://aws.amazon.com/security-hub/
   - type: Documentation
@@ -57,6 +65,8 @@ common:
     url: https://aws.amazon.com/security-hub/pricing/
   - type: Signup
     url: https://portal.aws.amazon.com/billing/signup
+  - url: https://aws.amazon.com/blogs/security/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
