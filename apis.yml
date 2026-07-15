@@ -49,6 +49,8 @@ apis:
         url: https://docs.aws.amazon.com/general/latest/gr/sechub.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/aws-security-hub-agentic-access.yml
   - type: TrustCenter
     url: security/aws-security-hub-trust-center.yml
   - type: VulnerabilityDisclosure
