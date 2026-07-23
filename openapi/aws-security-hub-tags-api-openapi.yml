@@ -1,0 +1,101 @@
+openapi: 3.1.0
+info:
+  title: AWS Security Hub Action Targets Tags API
+  version: '2018-10-26'
+  description: 'AWS Security Hub is a cloud security posture management service that
+
+    aggregates, organizes, and prioritizes security findings from AWS
+
+    services and third-party products. The API exposes REST operations for
+
+    managing security standards, controls, findings, insights, automation
+
+    rules, configuration policies, and member account configuration. All
+
+    requests are signed with AWS Signature Version 4 (SigV4).
+
+
+    See https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
+
+    '
+servers:
+- url: https://securityhub.{region}.amazonaws.com
+  description: AWS Security Hub regional endpoint
+  variables:
+    region:
+      default: us-east-1
+security:
+- SigV4: []
+tags:
+- name: Tags
+paths:
+  /tags/{ResourceArn}:
+    get:
+      tags:
+      - Tags
+      operationId: ListTagsForResource
+      summary: List tags
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    post:
+      tags:
+      - Tags
+      operationId: TagResource
+      summary: Tag a resource
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    delete:
+      tags:
+      - Tags
+      operationId: UntagResource
+      summary: Untag a resource
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      - name: tagKeys
+        in: query
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    ResourceArn:
+      name: ResourceArn
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
