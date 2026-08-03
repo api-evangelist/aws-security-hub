@@ -1,0 +1,34 @@
+{
+  "provider": "aws-security-hub",
+  "sources": [
+    "aws-security-hub-action-targets-api-openapi.yml",
+    "aws-security-hub-automation-rules-api-openapi.yml",
+    "aws-security-hub-configuration-policies-api-openapi.yml",
+    "aws-security-hub-controls-api-openapi.yml",
+    "aws-security-hub-findings-api-openapi.yml",
+    "aws-security-hub-hub-api-openapi.yml",
+    "aws-security-hub-insights-api-openapi.yml",
+    "aws-security-hub-invitations-api-openapi.yml",
+    "aws-security-hub-members-api-openapi.yml",
+    "aws-security-hub-standards-api-openapi.yml",
+    "aws-security-hub-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "aws-security-hub-action-targets-api-openapi.yml",
+    "aws-security-hub-automation-rules-api-openapi.yml",
+    "aws-security-hub-configuration-policies-api-openapi.yml",
+    "aws-security-hub-controls-api-openapi.yml",
+    "aws-security-hub-findings-api-openapi.yml",
+    "aws-security-hub-hub-api-openapi.yml",
+    "aws-security-hub-insights-api-openapi.yml",
+    "aws-security-hub-invitations-api-openapi.yml",
+    "aws-security-hub-members-api-openapi.yml",
+    "aws-security-hub-standards-api-openapi.yml",
+    "aws-security-hub-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
