@@ -35,7 +35,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: aws-security-hub:cspm-api
   name: AWS Security Hub CSPM API
