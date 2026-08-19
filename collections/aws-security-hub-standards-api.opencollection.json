@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub Action Targets Standards API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Standards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List supported standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards"
+          },
+          "docs": "List supported standards"
+        },
+        {
+          "info": {
+            "name": "Enable standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/register",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enable standards"
+        },
+        {
+          "info": {
+            "name": "Disable standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/deregister",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Disable standards"
+        },
+        {
+          "info": {
+            "name": "Get enabled standards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/get"
+          },
+          "docs": "Get enabled standards"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

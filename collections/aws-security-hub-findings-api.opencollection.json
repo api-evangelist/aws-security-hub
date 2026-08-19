@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub Action Targets Findings API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Findings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get findings"
+        },
+        {
+          "info": {
+            "name": "Batch update findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://securityhub.{region}.amazonaws.com/findings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch update findings"
+        },
+        {
+          "info": {
+            "name": "Batch import findings from a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings/import",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch import findings from a product"
+        },
+        {
+          "info": {
+            "name": "Get finding history",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/findings/history",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get finding history"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

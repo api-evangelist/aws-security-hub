@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub Action Targets Automation Rules API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Automation Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an automation rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an automation rule"
+        },
+        {
+          "info": {
+            "name": "List automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/list"
+          },
+          "docs": "List automation rules"
+        },
+        {
+          "info": {
+            "name": "Batch get automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch get automation rules"
+        },
+        {
+          "info": {
+            "name": "Batch delete automation rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/automationrules/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch delete automation rules"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

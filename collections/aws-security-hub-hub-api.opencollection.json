@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Action Targets Hub API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Hub",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe the Hub configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "params": [
+              {
+                "name": "HubArn",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describe the Hub configuration"
+        },
+        {
+          "info": {
+            "name": "Enable Security Hub for the account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enable Security Hub for the account"
+        },
+        {
+          "info": {
+            "name": "Update Hub configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Hub configuration"
+        },
+        {
+          "info": {
+            "name": "Disable Security Hub for the account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://securityhub.{region}.amazonaws.com/accounts"
+          },
+          "docs": "Disable Security Hub for the account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

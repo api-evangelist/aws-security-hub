@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub Action Targets Controls API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Controls",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe standards controls",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/standards/controls/:StandardsSubscriptionArn",
+            "params": [
+              {
+                "name": "StandardsSubscriptionArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describe standards controls"
+        },
+        {
+          "info": {
+            "name": "List security control definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/securityControls"
+          },
+          "docs": "List security control definitions"
+        },
+        {
+          "info": {
+            "name": "Batch get security controls",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/securityControls/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch get security controls"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

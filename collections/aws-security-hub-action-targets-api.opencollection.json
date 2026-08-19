@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Security Hub Action Targets API",
+    "version": "2018-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Action Targets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Describe action targets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://securityhub.{region}.amazonaws.com/actionTargets"
+          },
+          "docs": "Describe action targets"
+        },
+        {
+          "info": {
+            "name": "Create an action target",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://securityhub.{region}.amazonaws.com/actionTargets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an action target"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
