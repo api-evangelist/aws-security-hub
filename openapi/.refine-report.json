@@ -29,6 +29,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "aws-security-hub-action-targets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-automation-rules-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-configuration-policies-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-controls-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-findings-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-hub-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-insights-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-invitations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-members-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-standards-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-security-hub-tags-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
