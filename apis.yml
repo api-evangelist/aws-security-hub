@@ -1,13 +1,10 @@
 aid: aws-security-hub
 name: AWS Security Hub
-description: >-
-  AWS Security Hub is a cloud security posture management (CSPM) service that
-  aggregates, organizes, and prioritizes security findings from AWS services
-  like Amazon GuardDuty, Inspector, and Macie, as well as supported
-  third-party products. It continuously assesses your AWS environment against
-  security standards such as AWS Foundational Security Best Practices, CIS,
-  PCI DSS, and NIST. The Security Hub API and AWS SDKs provide access to
-  findings, controls, insights, and automation rules using AWS Signature
+description: AWS Security Hub is a cloud security posture management (CSPM) service that aggregates, organizes,
+  and prioritizes security findings from AWS services like Amazon GuardDuty, Inspector, and Macie, as
+  well as supported third-party products. It continuously assesses your AWS environment against security
+  standards such as AWS Foundational Security Best Practices, CIS, PCI DSS, and NIST. The Security Hub
+  API and AWS SDKs provide access to findings, controls, insights, and automation rules using AWS Signature
   Version 4 authentication.
 type: Index
 deliveryModel:
@@ -37,25 +34,23 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-security-hub.png
 tags:
-  - Security
-  - Cloud Security Posture Management
-  - Compliance
-  - Findings
-  - Threat Detection
-  - Cloud
-  - AWS
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml
+- Security
+- Cloud Security Posture Management
+- Compliance
+- Findings
+- Threat Detection
+- Cloud
+- AWS
+url: https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: aws-security-hub:cspm-api
   name: AWS Security Hub CSPM API
-  description: >-
-    REST API for managing security standards, controls, findings, insights, automation rules, and member
-    account configuration in AWS Security Hub. Requests are authenticated with AWS Signature Version 4
-    (SigV4) using AWS access keys or temporary IAM credentials.
+  description: REST API for managing security standards, controls, findings, insights, automation rules,
+    and member account configuration in AWS Security Hub. Requests are authenticated with AWS Signature
+    Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
@@ -93,8 +88,8 @@ apis:
     url: openapi/aws-security-hub-automation-rules-api-openapi.yml
 - aid: aws-security-hub:aws-security-hub-configuration-policies-api
   name: AWS Security Hub Configuration Policies API
-  description: >-
-    The Configuration Policies API from AWS Security Hub — 3 operation(s) for configuration policies.
+  description: The Configuration Policies API from AWS Security Hub — 3 operation(s) for configuration
+    policies.
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
@@ -123,7 +118,7 @@ apis:
   - type: OpenAPI
     url: openapi/aws-security-hub-findings-api-openapi.yml
 - aid: aws-security-hub:aws-security-hub-hub-api
-  name: AWS Security Hub Hub API
+  name: AWS Security Hub API
   description: The Hub API from AWS Security Hub — 1 operation(s) for hub.
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
@@ -183,28 +178,28 @@ apis:
   - type: OpenAPI
     url: openapi/aws-security-hub-tags-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/aws-security-hub-agentic-access.yml
-  - type: TrustCenter
-    url: security/aws-security-hub-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/aws-security-hub-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/aws-security-hub-domain-security.yml
-  - type: Authentication
-    url: authentication/aws-security-hub-authentication.yml
-  - type: Website
-    url: https://aws.amazon.com/security-hub/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/securityhub/
-  - type: Pricing
-    url: https://aws.amazon.com/security-hub/pricing/
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
-  - url: https://aws.amazon.com/blogs/security/feed/
-    type: Blog
+- type: AgenticAccess
+  url: agentic-access/aws-security-hub-agentic-access.yml
+- type: TrustCenter
+  url: security/aws-security-hub-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/aws-security-hub-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aws-security-hub-domain-security.yml
+- type: Authentication
+  url: authentication/aws-security-hub-authentication.yml
+- type: Website
+  url: https://aws.amazon.com/security-hub/
+- type: Documentation
+  url: https://docs.aws.amazon.com/securityhub/
+- type: Pricing
+  url: https://aws.amazon.com/security-hub/pricing/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- url: https://aws.amazon.com/blogs/security/feed/
+  type: Blog
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: aws
 x-relationship: product
