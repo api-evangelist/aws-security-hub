@@ -103,6 +103,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
+  - Control
+  tags_raw:
   - Controls
   properties:
   - type: OpenAPI
