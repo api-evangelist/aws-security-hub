@@ -1,17 +1,7 @@
 {
   "provider": "aws-security-hub",
   "sources": [
-    "aws-security-hub-action-targets-api-openapi.yml",
-    "aws-security-hub-automation-rules-api-openapi.yml",
-    "aws-security-hub-configuration-policies-api-openapi.yml",
-    "aws-security-hub-controls-api-openapi.yml",
-    "aws-security-hub-findings-api-openapi.yml",
-    "aws-security-hub-hub-api-openapi.yml",
-    "aws-security-hub-insights-api-openapi.yml",
-    "aws-security-hub-invitations-api-openapi.yml",
-    "aws-security-hub-members-api-openapi.yml",
-    "aws-security-hub-standards-api-openapi.yml",
-    "aws-security-hub-tags-api-openapi.yml"
+    "_original/aws-security-hub-openapi.yml"
   ],
   "outputs": [
     "aws-security-hub-action-targets-api-openapi.yml",
@@ -30,18 +20,21 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "aws-security-hub-action-targets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-automation-rules-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-configuration-policies-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-controls-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-findings-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-hub-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-insights-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-invitations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-members-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-standards-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-security-hub-tags-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "aws-security-hub-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "aws-security-hub-action-targets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-automation-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-configuration-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-controls-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-findings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-hub-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-insights-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-invitations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-standards-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

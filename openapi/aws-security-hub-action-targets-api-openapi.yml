@@ -15,9 +15,7 @@ info:
     requests are signed with AWS Signature Version 4 (SigV4).
 
 
-    See https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
-
-    '
+    See https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html'
 servers:
 - url: https://securityhub.{region}.amazonaws.com
   description: AWS Security Hub regional endpoint
@@ -49,17 +47,17 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  requestBodies:
-    JsonBody:
-      required: true
+  responses:
+    OK:
+      description: Successful response
       content:
         application/json:
           schema:
             type: object
             additionalProperties: true
-  responses:
-    OK:
-      description: Successful response
+  requestBodies:
+    JsonBody:
+      required: true
       content:
         application/json:
           schema:
