@@ -48,9 +48,10 @@ specificationVersion: '0.23'
 apis:
 - aid: aws-security-hub:cspm-api
   name: AWS Security Hub CSPM API
-  description: REST API for managing security standards, controls, findings, insights, automation rules,
-    and member account configuration in AWS Security Hub. Requests are authenticated with AWS Signature
-    Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
+  description: >-
+    REST API for managing security standards, controls, findings, insights, automation rules, and member
+    account configuration in AWS Security Hub. Requests are authenticated with AWS Signature Version 4
+    (SigV4) using AWS access keys or temporary IAM credentials.
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
@@ -88,8 +89,8 @@ apis:
     url: openapi/aws-security-hub-automation-rules-api-openapi.yml
 - aid: aws-security-hub:aws-security-hub-configuration-policies-api
   name: AWS Security Hub Configuration Policies API
-  description: The Configuration Policies API from AWS Security Hub — 3 operation(s) for configuration
-    policies.
+  description: >-
+    The Configuration Policies API from AWS Security Hub — 3 operation(s) for configuration policies.
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
@@ -179,6 +180,20 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/aws-security-hub-tags-api-openapi.yml
+- aid: aws-security-hub:aws-security-hub-integrations-api
+  name: AWS Security Hub Integrations API
+  description: Operations for managing product integrations.
+  humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
+  baseURL: https://securityhub.us-east-1.amazonaws.com
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-security-hub-integrations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/securityhub/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-security-hub-finding-schema.json
 common:
 - type: AgenticAccess
   url: agentic-access/aws-security-hub-agentic-access.yml
@@ -203,5 +218,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product

@@ -1,7 +1,8 @@
 {
   "provider": "aws-security-hub",
   "sources": [
-    "_original/aws-security-hub-openapi.yml"
+    "_original/aws-security-hub-openapi.yml",
+    "amazon-security-hub-integrations-api-openapi.yml"
   ],
   "outputs": [
     "aws-security-hub-action-targets-api-openapi.yml",
@@ -14,15 +15,18 @@
     "aws-security-hub-invitations-api-openapi.yml",
     "aws-security-hub-members-api-openapi.yml",
     "aws-security-hub-standards-api-openapi.yml",
-    "aws-security-hub-tags-api-openapi.yml"
+    "aws-security-hub-tags-api-openapi.yml",
+    "aws-security-hub-integrations-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "archived openapi/amazon-security-hub-integrations-api-openapi.yml"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "aws-security-hub-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "apis.yml register: written (+1 apis, 13 total)"
   ],
   "skipped": [
     "aws-security-hub-action-targets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
