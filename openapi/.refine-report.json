@@ -1,10 +1,11 @@
 {
   "provider": "aws-security-hub",
   "sources": [
-    "_original/aws-security-hub-openapi.yml",
-    "amazon-security-hub-integrations-api-openapi.yml"
+    "_original/amazon-security-hub-integrations-api-openapi.yml",
+    "_original/aws-security-hub-openapi.yml"
   ],
   "outputs": [
+    "aws-security-hub-integrations-api-openapi.yml",
     "aws-security-hub-action-targets-api-openapi.yml",
     "aws-security-hub-automation-rules-api-openapi.yml",
     "aws-security-hub-configuration-policies-api-openapi.yml",
@@ -15,18 +16,15 @@
     "aws-security-hub-invitations-api-openapi.yml",
     "aws-security-hub-members-api-openapi.yml",
     "aws-security-hub-standards-api-openapi.yml",
-    "aws-security-hub-tags-api-openapi.yml",
-    "aws-security-hub-integrations-api-openapi.yml"
+    "aws-security-hub-tags-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/amazon-security-hub-integrations-api-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "aws-security-hub-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+1 apis, 13 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "aws-security-hub-action-targets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -36,6 +34,7 @@
     "aws-security-hub-findings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "aws-security-hub-hub-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "aws-security-hub-insights-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-security-hub-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "aws-security-hub-invitations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "aws-security-hub-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "aws-security-hub-standards-api-openapi.yml: previously refined output, superseded by openapi/_original/",

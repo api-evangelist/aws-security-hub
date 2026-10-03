@@ -71,17 +71,17 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  requestBodies:
-    JsonBody:
-      required: true
+  responses:
+    OK:
+      description: Successful response
       content:
         application/json:
           schema:
             type: object
             additionalProperties: true
-  responses:
-    OK:
-      description: Successful response
+  requestBodies:
+    JsonBody:
+      required: true
       content:
         application/json:
           schema:

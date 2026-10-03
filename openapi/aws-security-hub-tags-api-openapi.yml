@@ -68,21 +68,6 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  parameters:
-    ResourceArn:
-      name: ResourceArn
-      in: path
-      required: true
-      schema:
-        type: string
-  requestBodies:
-    JsonBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   responses:
     OK:
       description: Successful response
@@ -91,6 +76,21 @@ components:
           schema:
             type: object
             additionalProperties: true
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    ResourceArn:
+      name: ResourceArn
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     SigV4:
       type: apiKey
