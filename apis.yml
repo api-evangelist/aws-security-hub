@@ -186,6 +186,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
   baseURL: https://securityhub.us-east-1.amazonaws.com
   tags:
+  - Integration
+  tags_raw:
   - Integrations
   properties:
   - type: OpenAPI
@@ -195,6 +197,9 @@ apis:
   - type: JSONSchema
     url: json-schema/amazon-security-hub-finding-schema.json
 common:
+- type: CapabilityMap
+  url: capabilities/aws-security-hub-capability-edges.yml
+  name: AWS Security Hub Business Capability Map
 - type: AgenticAccess
   url: agentic-access/aws-security-hub-agentic-access.yml
 - type: TrustCenter
