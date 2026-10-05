@@ -1,0 +1,78 @@
+slug: aws-security-hub
+provider: AWS Security Hub
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 6
+edges:
+- tag: Findings
+  spec_file: aws-security-hub-findings-api-openapi.yml
+  capability_id: BC-620.30
+  capability_id_l1: BC-620
+  capability_name: Threat Detection & Response Management
+  confidence: 0.85
+  evidence: POST /findings GetFindings; PATCH /findings BatchUpdateFindings; POST /findings/import "Batch
+    import findings from a product"
+  reason: Ingestion, retrieval and triage-update of security findings aggregated from detection products
+    is squarely SOC/SIEM-style threat detection and response, not financial-crime alerting or generic
+    monitoring.
+- tag: Automation Rules
+  spec_file: aws-security-hub-automation-rules-api-openapi.yml
+  capability_id: BC-620.30
+  capability_id_l1: BC-620
+  capability_name: Threat Detection & Response Management
+  confidence: 0.72
+  evidence: POST /automationrules/create "Create an automation rule"; service "aggregates, organizes,
+    and prioritizes security findings from AWS services and third-party products"
+  reason: Automation rules automatically act on and triage security findings, which is SOC-style detection
+    and response automation. Mapped to Threat Detection & Response with moderate confidence given the
+    rule-management framing.
+- tag: Controls
+  spec_file: aws-security-hub-controls-api-openapi.yml
+  capability_id: BC-620.10
+  capability_id_l1: BC-620
+  capability_name: Security Strategy & Governance Management
+  confidence: 0.72
+  evidence: GET /securityControls ListSecurityControlDefinitions; DescribeStandardsControls "Describe
+    standards controls"; standards such as "CIS, PCI DSS, and NIST"
+  reason: Operations expose security control definitions tied to compliance standards and frameworks,
+    which is security governance/GRC content rather than generic configuration.
+- tag: Standards
+  spec_file: aws-security-hub-standards-api-openapi.yml
+  capability_id: BC-620.10
+  capability_id_l1: BC-620
+  capability_name: Security Strategy & Governance Management
+  confidence: 0.72
+  evidence: DescribeStandards  List supported standards / BatchEnableStandards  Enable standards
+  reason: Enabling and listing security standards (AWS FSBP, CIS, PCI DSS, NIST per the vendor description)
+    is management of security frameworks and control baselines, which maps to Security Strategy & Governance
+    Management (frameworks, GRC).
+- tag: Action Targets
+  spec_file: aws-security-hub-action-targets-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: POST /actionTargets CreateActionTarget "Create an action target" within a service that "aggregates,
+    organizes, and prioritizes security findings"
+  reason: Action targets are custom response actions for security findings in a CSPM service, so Cybersecurity
+    Management at L1. Whether this counts as detection-and-response tooling or security governance configuration
+    is ambiguous, so no L2 asserted.
+- tag: Insights
+  spec_file: aws-security-hub-insights-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: CreateInsight  Create an insight / GetInsightResults  Get insight results
+  reason: Insights are saved groupings of aggregated security findings used to prioritise security issues,
+    per the spec description 'aggregates, organizes, and prioritizes security findings'. Clearly Cybersecurity
+    Management; ambiguous between threat detection and security governance sub-capabilities, so L2 withheld.
