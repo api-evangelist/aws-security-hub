@@ -1,4 +1,4 @@
-# AWS Security Hub (aws-security-hub)
+# AWS Security Hub
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,60 +66,144 @@
 
 AWS Security Hub is a cloud security posture management (CSPM) service that aggregates, organizes, and prioritizes security findings from AWS services like Amazon GuardDuty, Inspector, and Macie, as well as supported third-party products. It continuously assesses your AWS environment against security standards such as AWS Foundational Security Best Practices, CIS, PCI DSS, and NIST. The Security Hub API and AWS SDKs provide access to findings, controls, insights, and automation rules using AWS Signature Version 4 authentication.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-security-hub/refs/heads/main/apis.yml)
+**Areas:** Security · Cloud Security Posture Management · Compliance · Findings · Threat Detection · Cloud · AWS
 
-## Scope
+## AWS Security Hub on APIs.io
 
-- **Type:** Index
+Everything profiled for AWS Security Hub is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aws-security-hub/](https://apis.io/providers/aws-security-hub/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (27)
 
-- Security
-- Cloud Security Posture Management
-- Compliance
-- Findings
-- Threat Detection
-- Cloud
-- AWS
+- [AWS Security Hub CSPM API](https://apis.io/apis/aws-security-hub/cspm-api/) — REST API for managing security standards, controls, findings, insights, automation rules, and member account configuration in AWS Security Hub. Requests are…
+- [AWS Security Hub Action Targets API](https://apis.io/apis/aws-security-hub/aws-security-hub-action-targets-api/) — The Action Targets API from AWS Security Hub — 1 operation(s) for action targets.
+- [AWS Security Hub Automation Rules API](https://apis.io/apis/aws-security-hub/aws-security-hub-automation-rules-api/) — The Automation Rules API from AWS Security Hub — 4 operation(s) for automation rules.
+- [AWS Security Hub Configuration Policies API](https://apis.io/apis/aws-security-hub/aws-security-hub-configuration-policies-api/) — The Configuration Policies API from AWS Security Hub — 3 operation(s) for configuration policies.
+- [AWS Security Hub Controls API](https://apis.io/apis/aws-security-hub/aws-security-hub-controls-api/) — The Controls API from AWS Security Hub — 3 operation(s) for controls.
+- [AWS Security Hub Findings API](https://apis.io/apis/aws-security-hub/aws-security-hub-findings-api/) — The Findings API from AWS Security Hub — 3 operation(s) for findings.
+- [AWS Security Hub API](https://apis.io/apis/aws-security-hub/aws-security-hub-hub-api/) — The Hub API from AWS Security Hub — 1 operation(s) for hub.
+- [AWS Security Hub Insights API](https://apis.io/apis/aws-security-hub/aws-security-hub-insights-api/) — The Insights API from AWS Security Hub — 4 operation(s) for insights.
+- [AWS Security Hub Invitations API](https://apis.io/apis/aws-security-hub/aws-security-hub-invitations-api/) — The Invitations API from AWS Security Hub — 3 operation(s) for invitations.
+- [AWS Security Hub Members API](https://apis.io/apis/aws-security-hub/aws-security-hub-members-api/) — The Members API from AWS Security Hub — 4 operation(s) for members.
+- [AWS Security Hub Standards API](https://apis.io/apis/aws-security-hub/aws-security-hub-standards-api/) — The Standards API from AWS Security Hub — 4 operation(s) for standards.
+- [AWS Security Hub Tags API](https://apis.io/apis/aws-security-hub/aws-security-hub-tags-api/) — The Tags API from AWS Security Hub — 1 operation(s) for tags.
+- [AWS Security Hub Integrations API](https://apis.io/apis/aws-security-hub/aws-security-hub-integrations-api/) — Operations for managing product integrations.
+- [AWS Security Hub Security Hub Administrator API](https://apis.io/apis/aws-security-hub/aws-security-hub-administrator-api/) — The Security Hub Administrator API from AWS Security Hub — 2 operation(s) for security hub administrator.
+- [AWS Security Hub Security Hub Aggregatorv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-aggregatorv2-api/) — The Security Hub Aggregatorv2 API from AWS Security Hub — 5 operation(s) for security hub aggregatorv2.
+- [AWS Security Hub Security Hub Associations API](https://apis.io/apis/aws-security-hub/aws-security-hub-associations-api/) — The Security Hub Associations API from AWS Security Hub — 2 operation(s) for security hub associations.
+- [AWS Security Hub Security Hub Automationrulesv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-automationrulesv2-api/) — The Security Hub Automationrulesv2 API from AWS Security Hub — 3 operation(s) for security hub automationrulesv2.
+- [AWS Security Hub Security Hub Configurationpolicyassociation API](https://apis.io/apis/aws-security-hub/aws-security-hub-configurationpolicyassociation-api/) — The Security Hub Configurationpolicyassociation API from AWS Security Hub — 5 operation(s) for security hub configurationpolicyassociation.
+- [AWS Security Hub Security Hub Connectors API](https://apis.io/apis/aws-security-hub/aws-security-hub-connectors-api/) — The Security Hub Connectors API from AWS Security Hub — 2 operation(s) for security hub connectors.
+- [AWS Security Hub Security Hub Connectorsv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-connectorsv2-api/) — The Security Hub Connectorsv2 API from AWS Security Hub — 3 operation(s) for security hub connectorsv2.
+- [AWS Security Hub Security Hub Exportjobsv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-exportjobsv2-api/) — The Security Hub Exportjobsv2 API from AWS Security Hub — 2 operation(s) for security hub exportjobsv2.
+- [AWS Security Hub Security Hub Findingaggregator API](https://apis.io/apis/aws-security-hub/aws-security-hub-findingaggregator-api/) — The Security Hub Findingaggregator API from AWS Security Hub — 5 operation(s) for security hub findingaggregator.
+- [AWS Security Hub Security Hub Findingsv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-findingsv2-api/) — The Security Hub Findingsv2 API from AWS Security Hub — 3 operation(s) for security hub findingsv2.
+- [AWS Security Hub Security Hub Hubv2 API](https://apis.io/apis/aws-security-hub/aws-security-hub-hubv2-api/) — The Security Hub Hubv2 API from AWS Security Hub — 2 operation(s) for security hub hubv2.
+- [AWS Security Hub Security Hub Master API](https://apis.io/apis/aws-security-hub/aws-security-hub-master-api/) — The Security Hub Master API from AWS Security Hub — 2 operation(s) for security hub master.
+- [AWS Security Hub Security Hub Operations API](https://apis.io/apis/aws-security-hub/aws-security-hub-operations-api/) — The Security Hub Operations API from AWS Security Hub — 17 operation(s) for security hub operations.
+- [AWS Security Hub Security Hub Organization API](https://apis.io/apis/aws-security-hub/aws-security-hub-organization-api/) — The Security Hub Organization API from AWS Security Hub — 4 operation(s) for security hub organization.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AWS Security Hub CSPM API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing security standards, controls, findings, insights, automation rules, and member account configuration in AWS Security Hub. Requests are authenticated with AWS Signature Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
+- [Aws Security Hub Agentic Access](https://apis.io/agentic-access/aws-security-hub/aws-security-hub-agentic-access/)
 
-- **Human URL:** [https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html)
-- **Base URL:** `https://securityhub.us-east-1.amazonaws.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Security
-- CSPM
-- Findings
-- Compliance
-- AWS
+- [Finding](https://apis.io/schemas/aws-security-hub/amazon-security-hub-finding/)
 
-#### Properties
+#### Collections (12)
 
-- [Documentation](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html)
-- [User  Guide](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
-- [Endpoints](https://docs.aws.amazon.com/general/latest/gr/sechub.html)
-- [Postman Collection](collections/aws-security-hub.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/aws-security-hub.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [AWS Security Hub API](https://apis.io/collections/aws-security-hub/open-aws-security-hub/)
+- [AWS Security Hub Action Targets API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-action-targets-api/)
+- [AWS Security Hub Action Targets Automation Rules API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-automation-rules-api/)
+- [AWS Security Hub Action Targets Configuration Policies API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-configuration-policies-api/)
+- [AWS Security Hub Action Targets Controls API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-controls-api/)
+- [AWS Security Hub Action Targets Findings API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-findings-api/)
+- [AWS Security Action Targets Hub API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-hub-api/)
+- [AWS Security Hub Action Targets Insights API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-insights-api/)
+- [AWS Security Hub Action Targets Invitations API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-invitations-api/)
+- [AWS Security Hub Action Targets Members API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-members-api/)
+- [AWS Security Hub Action Targets Standards API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-standards-api/)
+- [AWS Security Hub Action Targets Tags API](https://apis.io/collections/aws-security-hub/open-aws-security-hub-tags-api/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aws Security Hub Authentication](https://apis.io/security/aws-security-hub/aws-security-hub-authentication/)
+- [Aws Security Hub Domain Security](https://apis.io/security/aws-security-hub/aws-security-hub-domain-security/)
+- [Aws Security Hub Trust Center](https://apis.io/security/aws-security-hub/aws-security-hub-trust-center/)
+- [Aws Security Hub Vulnerability Disclosure](https://apis.io/security/aws-security-hub/aws-security-hub-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://aws.amazon.com/security-hub/)
 - [Documentation](https://docs.aws.amazon.com/securityhub/)
 - [Pricing](https://aws.amazon.com/security-hub/pricing/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
+- [Blog](https://aws.amazon.com/blogs/security/feed/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 32.0** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 50.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 31.6 |
+
+**Agent readiness 21.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aws-security-hub/](https://apis.io/providers/aws-security-hub/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AWS Security Hub: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aws-security-hub/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
